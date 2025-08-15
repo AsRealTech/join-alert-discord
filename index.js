@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits } from 'discord.js';
+const { Client, GatewayIntentBits } = require('discord.js');
 
 // Load token from environment variable
 const token = process.env.BOT_TOKEN;
