@@ -1,13 +1,16 @@
 const { Client, GatewayIntentBits } = require('discord.js');
+require('dotenv').config();
 
 // Load token from environment variable
 const token = process.env.BOT_TOKEN;
 
 const client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMembers // Needed for member join events
-    ]
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
+  ]
 });
 
 client.once('ready', () => {
