@@ -5,12 +5,10 @@ require('dotenv').config();
 const token = process.env.BOT_TOKEN;
 
 const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent
-  ]
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMembers // Needed for member join events
+    ]
 });
 
 client.once('ready', () => {
